@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="shortcut icon" href="logo (2).png" type="image/x-icon">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            overflow: hidden;
+            margin: 20px;
+        }
+        .navbar-brand {
+            font-family: 'comic sans ms';
+            font-size: 50px;
+        }
+        .carousel-item img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .main-banner {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .side-list .list-group-item {
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .side-list .list-group-item:hover {
+            background-color: #333;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+            /* Tombol Custom */
+        .custom-arrow {
+        background-color: rgba(255, 255, 255, 0.1); 
+        border: none;
+        border-radius: 50%; 
+        width: 40px; 
+        height: 40px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff; 
+        font-size: 20px; 
+        transition: background-color 0.3s ease, transform 0.3s ease; 
+        cursor: pointer;
+        }
+
+        .custom-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.3); 
+        transform: scale(1.1); 
+        }
+
+        .custom-arrow:focus {
+        outline: none; 
+        }
+
+        .arrow-icon {
+        font-weight: bold; 
+        }
+
+        /* Flex Container untuk Tombol */
+        .custom-controls {
+        gap: 10px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand " href="#">GameZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    <!-- Dropdown Distribute -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="distributeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Distribute
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="distributeDropdown">
+                        <li><a class="dropdown-item" href="#">Distribute on Epic Games Store</a></li>
+                        <li><a class="dropdown-item" href="#">Developer Forums</a></li>
+                        <li><a class="dropdown-item" href="#">Documentation</a></li>
+                        <li><a class="dropdown-item" href="#">Learning</a></li>
+                    </ul>
+                </li>
+                    <li class="nav-item"><a class="btn btn-primary ms-3" href="#">Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Search and Navigation -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <input type="text" class="form-control w-25" placeholder="Search store">
+            <div>
+                <a href="home.html" class="text-white mx-2">Discover</a>
+                <a href="browse.html" class="text-white mx-2">Browse</a>
+                <a href="new.html" class="text-white mx-2">News</a>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="carousel-item-1.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel-item-2.avif" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel-item-3.jpeg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel-item-4.webp" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel-item-5.webp" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                {{-- <span class="carousel-control-prev-icon"></span> --}}
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                {{-- <span class="carousel-control-next-icon"></span> --}}
+            </button>
+        </div>
+
+        <!-- Main Banner and Sidebar -->
+        <div class="row">
+            <!-- Main Banner -->
+            <div class="col-md-8">
+                <div class="main-banner text-center">
+                    <img src="carousel-item-2.avif" class="img-fluid rounded mb-3" alt="Star Wars">
+                    <h3>Teenage Mutant Ninja Turtles: Splintered Fate</h3>
+                    <p class="mb-2">TMNT Splintered Fate - Unleash the Turtles in a rogue-like quest to rescue Splinter from the Foot Clan! Master ninja skills, unite in bodacious co-op gameplay, and conquer iconic NYC locales.</p>
+                    <p><strong>Rp 240.000</strong></p>
+                    <div>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-outline-light ms-2">Add to Wishlist</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="side-list">
+                    <h5 class="mb-3">Trending</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Teenage Mutant Ninja Turtles: Splintered Fate</li>
+                        <li class="list-group-item">Black Myth: Wukong</li>
+                        <li class="list-group-item">Red Dead Redemption 2</li>
+                        <li class="list-group-item">Mortal Kombat 11</li>
+                        <li class="list-group-item">Marvel's Spider-Man</li>
+                        <li class="list-group-item">MotoGP™24</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!-- Discover Section with Carousel -->
+    <div class="mt-5">
+    <!-- Header with Title and Carousel Controls -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="text-white">New Game</h3>
+                <div class="custom-controls">
+                <!-- Tombol Sebelah Kiri -->
+                <button class="btn custom-arrow" type="button" data-bs-target="#discoverCarousel" data-bs-slide="prev">
+                    <span class="arrow-icon">&lt;</span>
+                </button>
+            <!-- Tombol Sebelah Kanan -->
+            <button class="btn custom-arrow" type="button" data-bs-target="#discoverCarousel" data-bs-slide="next">
+                <span class="arrow-icon">&gt;</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="discoverCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Item 1 -->
+            <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="carousel-item-3.jpeg" class="card-img-top" alt="Necroking">
+                            <div class="card-body text-left">
+                                <!-- Tulisan Base Game -->
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Trending</h4>
+                                <!-- Judul Game -->
+                                <h6 class="card-title">Black Myth: Wukong</h6>
+                                <!-- Harga -->
+                                <p class="text-white">Rp 699.999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-2.avif" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Trending</h4>
+                                <h6 class="card-title">Red Dead Redemption 2</h6>
+                                <p class="text-white">Rp 879.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="carousel-item-1.jpg" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Trending</h4>
+                                <h6 class="card-title">Mortal Kombat 11</h6>
+                                <p class="text-white">Rp 1.399.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="carousel-item-4.webp" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Trending</h4>
+                                <h6 class="card-title">Marvel’s Spider-Man</h6>
+                                <p class="text-white">Rp 879.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-3.webp" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Trending</h4>
+                                <h6 class="card-title">MotoGP™24</h6>
+                                <p class="text-white">Rp 699.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-4.avif" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">LEGO Horizon Adventures</h6>
+                                <p class="text-white">Rp 879.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-5.avif" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">Horizon Zero Dawn</h6>
+                                <p class="text-white">Rp 729.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-6.avif" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">Dragon Age: The Veilguard</h6>
+                                <p class="text-white">Rp 659.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-7.webp" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">FINAL FANTASY XVI</h6>
+                                <p class="text-white">Rp 729.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-8.jpg" class="card-img-top" alt="S.T.A.L.K.E.R 2">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">Total War: WARHAMMER III</h6>
+                                <p class="text-white">Rp 648.999</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-9.webp" class="card-img-top" alt="God Of War">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">God Of War Ragnarok</h6>
+                                <p class="text-white">Rp 879.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-10.avif" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Maniac</h4>
+                                <h6 class="card-title">Assassin's Creed Valhalla</h6>
+                                <p class="text-white">Rp 619.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-11.avif" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Stray</h6>
+                                <p class="text-white">Rp 237.999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-11.webp" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">It Takes Two</h6>
+                                <p class="text-white">Rp 479.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-12.webp" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Warcraft 3 Reforged</h6>
+                                <p class="text-white">Rp 519.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-13.webp" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Little Nightmares</h6>
+                                <p class="text-white">Rp 199.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-14.jpg" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Little Nightmares 2</h6>
+                                <p class="text-white">Rp 299.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-15.webp" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Troublemaker</h6>
+                                <p class="text-white">Rp 128.799</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-16.jpg" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Goat Simulator 3</h6>
+                                <p class="text-white">Rp 245.999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white">
+                            <img src="card-text-17.webp" class="card-img-top" alt="Gran Saga">
+                            <div class="card-body text-left">
+                                <h4 class="mb-2" style="color: #B3B3B3; background-color: #2B2B2B; border-radius: 3px; font-weight: 500; padding: 4px 8px; font-size: 15px; display: inline-block;">Hot</h4>
+                                <h6 class="card-title">Chained Together</h6>
+                                <p class="text-white">Rp 47.499</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Elemen Baru -->
+<div class="mt-5">
+    <h3 class="text-white">Special Offers</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        <div class="col">
+            <div class="card text-white">
+                <img src="new-elemen-1.jpg" class="card-img-top" alt="Fortnite x Juice WRLD">
+                <div class="card-body">
+                    <h5 class="card-title">Empire of the Ants</h5>
+                    <p class="text-white">Rp 449.000</p>
+                    <p class="card-text">Conquer enemy nests and lead your colony through the perils of the forest in this groundbreaking RTS. Empire of the Ants is a photorealistic, third-person real-time strategy game.</p>
+                    <a href="#" class="btn btn-primary">See In Shop</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white">
+                <img src="new-elemen-2.jpg" class="card-img-top" alt="Fortnite Shoes">
+                <div class="card-body">
+                    <h5 class="card-title">Game of Thrones Winter is Coming</h5>
+                    <p class="text-white">Rp 1.910.000</p>
+                    <p class="card-text">Game of Thrones Winter is Coming is a PC strategy game based on the HBO drama television series, officially licensed by Warner Bros. Interactive Entertainment under HBO.</p>
+                    <a href="#" class="btn btn-primary">See In Shop</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white">
+                <img src="new-elemen-3.avif" class="card-img-top" alt="Fortnite x Fast & Furious">
+                <div class="card-body">
+                    <h5 class="card-title">Star Wars Outlaws</h5>
+                    <p class="text-white">Rp 809.000</p>
+                    <p class="card-text">Experience the first-ever open world Star Wars™ game and explore distinct locations across the galaxy, both iconic and new. Risk it all as scoundrel Kay Vess, seeking freedom and the means to start a new life.</p>
+                    <a href="#" class="btn btn-primary">See In Shop</a>
+                </div>
+            </div>5
+        </div>
+    </div>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

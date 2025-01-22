@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="shortcut icon" href="logo (2).png" type="image/x-icon">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .search-bar {
+            margin: 20px 0;
+        }
+        .category-card img {
+            height: 100px;
+            object-fit: cover;
+        }
+        .self-service .card {
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+        }
+        .self-service .card:hover {
+            background-color: #333;
+        }
+        .self-service .card h6 {
+            color: white;
+        }
+        .navbar-brand {
+            font-family: 'comic sans ms';
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="#">GameZone Support</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="new.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-3" href="#">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mt-4 text-center">
+        <h1>Welcome to GameZone Player Support</h1>
+        <p class="text-muted">Server Status: <span class="text-success">All Systems Operational</span></p>
+        <!-- Search Bar -->
+        <div class="input-group search-bar">
+            <input type="text" class="form-control" placeholder="Search Help Center">
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container mt-5">
+        <h3>Jump to:</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+            <div class="col">
+                <div class="card category-card text-center">
+                    <img src="categories-1.jpg" class="card-img-top" alt="Self-service">
+                    <div class="card-body">
+                        <h6 class="card-title">Self-service</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card category-card text-center">
+                    <img src="categories-2.jpg" class="card-img-top" alt="Games">
+                    <div class="card-body">
+                        <h6 class="card-title">Games</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card category-card text-center">
+                    <img src="categories-3.jpg" class="card-img-top" alt="Accounts">
+                    <div class="card-body">
+                        <h6 class="card-title">Accounts</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card category-card text-center">
+                    <img src="categories-4.jpg" class="card-img-top" alt="Enterprise">
+                    <div class="card-body">
+                        <h6 class="card-title">Enterprise</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Self-service Section -->
+     <div class="container mt-5 self-service">
+        <h3>Self-service</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <div class="col">
+                <div class="card p-3 text-center">
+                    <h6>Forgot email address</h6>
+                    <p class="text-white">Locate the email address linked with your account.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center">
+                    <h6>Forgot password</h6>
+                    <p class="text-white">Reset your password using your email address.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center">
+                    <h6>Recover your account</h6>
+                    <p class="text-white">Recover access to your account if you're locked out.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center">
+                    <h6>Enable two-factor authentication</h6>
+                    <p class="text-white">Secure your account by enabling two-factor authentication (2FA).</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center">
+                    <h6>Epic Games Store refunds</h6>
+                    <p class="text-white">Refund eligible Epic Games Store purchases.</p>
+                </div>
+            </div>
+            <div class="col text-color-white">
+                <div class="card p-3 text-center">
+                    <h6>Show all tools</h6>
+                    <p class="text-white">Access all available tools to manage your account.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
